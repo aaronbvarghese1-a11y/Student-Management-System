@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - Student Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="layout">
+
+        <nav class="sidebar">
+            <div class="brand">🎓 Student System</div>
+            <a href="dashboard.html">📊 Dashboard</a>
+            <a href="students.html" class="active">👨‍🎓 Students</a>
+            <a href="#" id="logoutBtn" class="logout">🚪 Logout</a>
+        </nav>
+
+        <main class="main">
+            <div class="topbar">
+                <h1>Students</h1>
+                <span>Logged in as <strong id="userName"></strong></span>
+            </div>
+
+            <div class="toolbar">
+                <input type="text" id="searchInput" placeholder="Search by name or ID...">
+                <button class="btn btn-inline" id="addBtn">+ Add Student</button>
+            </div>
+
+            <section class="panel">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Course</th>
+                                <th>Phone</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <!-- Pop-up form for Add and Edit -->
+    <div class="modal" id="studentModal">
+        <div class="modal-box">
+            <h2 id="modalTitle">Add Student</h2>
+            <div id="formMessage" class="message"></div>
+
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <input type="text" id="course" placeholder="e.g. Computer Science" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" placeholder="10 digits" required>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="submit" class="btn">Save</button>
+                    <button type="button" class="btn btn-cancel" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/students.js"></script>
+</body>
+</html>

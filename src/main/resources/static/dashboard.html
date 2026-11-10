@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Student Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="layout">
+
+        <nav class="sidebar">
+            <div class="brand">🎓 Student System</div>
+            <a href="dashboard.html" class="active">📊 Dashboard</a>
+            <a href="students.html">👨‍🎓 Students</a>
+            <a href="#" id="logoutBtn" class="logout">🚪 Logout</a>
+        </nav>
+
+        <main class="main">
+            <div class="topbar">
+                <h1>Dashboard</h1>
+                <span>Logged in as <strong id="userName"></strong></span>
+            </div>
+
+            <section class="cards">
+                <div class="card">
+                    <div class="label">Total Students</div>
+                    <div class="value" id="totalStudents">0</div>
+                </div>
+                <div class="card">
+                    <div class="label">Total Courses</div>
+                    <div class="value" id="totalCourses">0</div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Student Details</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Course</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
